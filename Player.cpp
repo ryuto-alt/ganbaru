@@ -17,6 +17,7 @@ void Player::Initialize(Model* model, ViewProjection* viewProjection, const Vect
 	viewProjection_ = viewProjection;
 }
 
+
 void Player::Update() {
 
 	PrayerMove();

@@ -16,6 +16,7 @@ GameScene2::~GameScene2() {
 	for (std::vector<WorldTransform*>& worldTransformBlockLine : worldTransformBlocks_) {
 		for (WorldTransform* worldTransformBlock : worldTransformBlockLine) {
 
+
 			delete worldTransformBlock;
 		}
 	}

@@ -18,6 +18,7 @@ void Door::Initialize(Model* model, ViewProjection* viewProjection, const Vector
 	worldTransform_.UpdateMatrix();
 }
 
+
 void Door::Update() {
 	worldTransform_.UpdateMatrix();
 }
