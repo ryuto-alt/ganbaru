@@ -99,7 +99,7 @@ void GameScene2::Initialize() {
 }
 
 void GameScene2::Update() {
-
+	skydome_->Update();
 	// プレイヤーのX座標を取得
 	Vector3 playerPosition = player_->GetWorldPosition();
 

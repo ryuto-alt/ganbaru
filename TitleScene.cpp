@@ -1,5 +1,6 @@
 #include "TitleScene.h"
 #include <numbers>
+#include"Skydome.h"
 
 TitleScene::TitleScene() {}
 
@@ -30,6 +31,10 @@ void TitleScene::Initialize() {
 
 	Timer_ = 0.0f;
 
+	skydome_ = new Skydome();
+	modelSkydome_ = Model::CreateFromOBJ("skydome", true);
+	skydome_->Initialize(modelSkydome_, &viewProjection_);
+
 	// タイトルを近づける
 	worldTransform_.translation_ = { 0.0f, 1.0f, 0.0f };  // z値を調整して近づける
 }
@@ -38,6 +43,7 @@ void TitleScene::Update() {
 
 	// マウス座標を取得
 	Vector2 mousePos = input_->GetMousePosition();
+	skydome_->Update();
 
 #ifdef DEBUG
 	// ImGuiでマウス座標を表示
@@ -123,6 +129,7 @@ void TitleScene::Draw() {
 
 
 	model_->Draw(worldTransform_, viewProjection_);
+	skydome_->Draw();
 	/*stage1model_->Draw(worldTransform_, viewProjection_);
 	stage2model_->Draw(worldTransform_, viewProjection_);
 	stage3model_->Draw(worldTransform_, viewProjection_);*/

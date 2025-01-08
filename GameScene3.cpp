@@ -98,7 +98,7 @@ void GameScene3::Initialize() {
 }
 
 void GameScene3::Update() {
-
+	skydome_->Update();
 	if (invertCooldownTimer_ > 0.0f) {
 		invertCooldownTimer_ -= 1;
 	}

@@ -101,7 +101,7 @@ void GameScene::Initialize() {
 
 void GameScene::Update() {
 
-
+	skydome_->Update();
 	//if (!isBGMPlaying_) {
 	//	audio_->playAudio(BGMAudio_, BGMHandle_, true, 0.5f);
 	//	isBGMPlaying_ = true; // フラグを立てる
